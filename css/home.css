@@ -1,0 +1,159 @@
+@import 'global.css';
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 1.5rem 0;
+    background-color: var(--brown);
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    gap: 16rem;
+}
+
+.nav-link {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--brown);
+}
+
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('../assets/home/a1.jpeg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#brand-name {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 4.5rem;
+    letter-spacing: 0.3em;
+    text-align: center;
+    font-weight: 400;
+    animation: fadeIn 1s ease;
+}
+
+#philosophy {
+    padding: 8rem 0;
+    background-color: var(--brown);
+    margin-top: 18rem;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+#philosophy-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#philosophy-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+#philosophy-image {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#philosophy-image img {
+    transition: var(--transition);
+}
+
+#philosophy-image:hover img {
+    transform: scale(1.05);
+}
+
+#latest-collection {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+#collection-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#collection-subtitle {
+    color: var(--cream);
+    font-style: italic;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--brown);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif;
+    margin: 1rem 0 0.5rem;
+}
+
+.product-price {
+    color: var(--cream);
+}
+
+#footer {
+    background-color: var(--brown);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 4rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.25rem;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    #nav { gap: 2rem; }
+    #brand-name { font-size: 2.5rem; }
+    .philosophy-content { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
